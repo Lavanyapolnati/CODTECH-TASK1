@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class calculator
+{
+    public static void main(String[] args)
+    {
+        Scanner s= new Scanner(System.in);
+        double n1,n2;
+        System.out.println("Enter first number:");
+        n1=s.nextDouble();
+        System.out.println("Enter Second number:");
+        n2=s.nextDouble();
+        System.out.println("Enter an operator(+,-,*,/):");
+        char operator = s.next().charAt(0);
+        double result;
+        switch(operator)
+        {
+            case'+':
+                result=n1+n2;
+                break;
+            case'-':
+                result=n1-n2;
+                break;
+            case'*':
+                result=n1*n2;
+                break;
+            case'/':
+                result=n1/n2;
+                break;
+            default:
+                System.out.println("Error! Invalid operator.");
+                return;
+        }
+        System.out.println(n1+""+operator+""+n1+"="+result);
+    }
+}
